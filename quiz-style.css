@@ -50,7 +50,6 @@ body
 }
 .header
 {
-    /*background-color: #1E1E1E;*/
     height: 100px;
     display: grid;
     place-items: center;
