@@ -40,17 +40,17 @@ body
 }
 #container
 {
-    border-radius: 30px;
+    /*border-radius: 30px;*/
     width: 400px;
     max-height: 630px;
-    border: 1px solid #ffffff20;
+    /*border: 1px solid #ffffff20;*/
     overflow: hidden;
-    background-color: #1E1E1E;
+    /*background-color: #1E1E1E;*/
     color: #d7dade;
 }
 .header
 {
-    background-color: #1E1E1E;
+    /*background-color: #1E1E1E;*/
     height: 100px;
     display: grid;
     place-items: center;
