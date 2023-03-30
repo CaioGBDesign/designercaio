@@ -1,21 +1,20 @@
 let quiz_rules = [
-    "Você só tem 20 segundos para responder cada questão.",
-    "Após marcar cada resposta não poderá desmarcar.",
-    "Você receberá 1 ponto a cada resposta correta."
+    "You only have 20 seconds to answer each question.",
+    "Once you mark each answer, you cannot unmark it.",
+    "You will receive 1 point for each correct answer."
 ];
-
 
 let quiz_questions = [
     // question 1
     {
         // question
-        question: "Do que se trata a heurística do afeto de Kahneman?",
+        question: "What is Kahneman's affect heuristic about?",
 
         // options
         options : [
-            "Escolhas baseadas em experiências anteriores.",
-            "Decisões tomadas mais rapidamente por meio do julgamento emocional.",
-            "Quando a quantidade interfere na decisão do usuário.",
+            "Choices based on previous experiences.",
+            "Decisions made more quickly through emotional judgment.",
+            "When quantity interferes with the user's decision.",
         ],
 
         // correct answer
@@ -23,8 +22,8 @@ let quiz_questions = [
     },
     
     {
-        // write yout question here
-        question: "O princípio do prazer, que diz que buscamos instintivamente o prazer e não a dor, foi pensado por quem?",
+        // write your question here
+        question: "Who came up with the pleasure principle, which says that we instinctively seek pleasure and not pain?",
     
         options: [
             "Nielsen",
@@ -36,39 +35,39 @@ let quiz_questions = [
     //    selected_answer:null
     },
     {
-        // write yout question here
-        question: "O que é a heurística de Bandwagon?",
+        // write your question here
+        question: "What is the Bandwagon heuristic?",
     
         options: [
-            "Viés cognitivo da prova social.",
-            "Viés da impulsividade.",
-            "Viés da ambiguidade",
+            "Cognitive bias of social proof.",
+            "Bias of impulsiveness.",
+            "Bias of ambiguity.",
         ],
         // correct option (1,2,3,4 etc)
         answer: 1,
     //    selected_answer:null
     },
     {
-        // write yout question here
-        question: "Quantidade de informações significa qualidade?",
+        // write your question here
+        question: "Does the quantity of information mean quality?",
     
         options: [
-            "Sim, é importante que o usuário tenha em mãos tudo o que puder.",
-            "Não, informação não interfere na experiência.",
-            "Não. O segredo é saber distribuir as informações, pois quanto maior a quantidade, menos o usuário vai ler.",
+            "Yes, it's important for the user to have everything they can in hand.",
+            "No, information doesn't affect the experience.",
+            "No. The secret is knowing how to distribute the information, because the more there is, the less the user will read.",
         ],
         // correct option (1,2,3,4 etc)
         answer: 3,
     //    selected_answer:null
     },
     {
-        // write yout question here
-        question: "A psicologia é importante para o UX?",
+        // write your question here
+        question: "Is psychology important for UX?",
     
         options: [
-            "Ok, não exagera.",
-            "Nem sempre, muitas vezes, o básico é o único necessário.",
-            "Sim, o comportamento do usuário é um estudo primordial para obtenção de resultados.",
+            "Okay, don't exaggerate.",
+            "Not always, often the basics are all that's necessary.",
+            "Yes, the user's behavior is a primary study for obtaining results.",
         ],
         // correct option (1,2,3,4 etc)
         answer: 3,
