@@ -11,10 +11,10 @@ let quizRules = () => {
     total_correct_ans = 0;
 
     container.innerHTML = `
-    <div class="header">Regras do Quiz</div>
+    <div class="header">Quiz rules</div>
         <ol></ol>
         <div id="start-quiz-wrapper">
-            <button id="start-quiz">Começar</button>
+            <button id="start-quiz">Start</button>
         </div>
     `;
 
@@ -35,7 +35,7 @@ let quizRules = () => {
 let quizQuestion = (q) => {
     q--;
     container.innerHTML = `
-    <div class="header">Quiz de UX/UI</div>
+    <div class="header">UX/UI quiz</div>
         <div class="content">
             <div class="content-wrapper">
                 <h2 class="question">${current_question + "." + quiz_questions[q]['question']}</h2>
@@ -43,7 +43,7 @@ let quizQuestion = (q) => {
                 </div>
             </div>
             <div class="footer" id="footer">
-                <p id="timer">Tempo restante: 20 s</p>
+                <p id="timer">Time left: 20 s</p>
             </div>
         </div>
     `;
@@ -61,7 +61,7 @@ let quizQuestion = (q) => {
         option.addEventListener("click", () => {
             clearInterval(interval);
             // adding next question button
-            document.querySelector("#footer").innerHTML += `<button id="next-question">Próxima</button>`;
+            document.querySelector("#footer").innerHTML += `<button id="next-question">Next</button>`;
 
             document.querySelector("#next-question").addEventListener("click", () => {
                 if (current_question == quiz_questions.length) {
@@ -109,7 +109,7 @@ let quizQuestion = (q) => {
             });
 
             // adding next question button
-            document.querySelector("#footer").innerHTML += `<button id="next-question">Próxima</button>`;
+            document.querySelector("#footer").innerHTML += `<button id="next-question">Next</button>`;
 
             document.querySelector("#next-question").addEventListener("click", () => {
                 if (current_question == quiz_questions.length) {
@@ -121,9 +121,9 @@ let quizQuestion = (q) => {
                 quizQuestion(current_question);
             });
             document.querySelector("#timer").classList.add("time-over");
-            document.querySelector("#timer").innerHTML = `Tempo esgotado`;
+            document.querySelector("#timer").innerHTML = `Time is over`;
         }else{   
-            document.querySelector("#timer").innerHTML = `Tempo restante: ${time_left} s`;
+            document.querySelector("#timer").innerHTML = `Time left: ${time_left} s`;
         }
     }, 1000);
 }
@@ -131,14 +131,14 @@ let quizQuestion = (q) => {
 
 let quizResult = () => {
     container.innerHTML = `
-    <div class="header">Sua pontuação</div>
+    <div class="header">Your score</div>
         <div id="trophy">
             <i class="fa-solid fa-trophy"></i>
         </div>
-        <h3 id="score">Você acertou <b>${total_correct_ans}</b> de <b>${quiz_questions.length}</b></h3>
+        <h3 id="score">You got it right <b>${total_correct_ans}</b> out of <b>${quiz_questions.length}</b></h3>
         <div id="result-footer">
-            <button id="start-again">Jogar novamente</button>
-            <button id="detailed-result">Ver detalhes</button>
+            <button id="start-again">Play again</button>
+            <button id="detailed-result">See details</button>
         </div>
     `;
 
@@ -155,13 +155,13 @@ let quizResult = () => {
 
 let viewResult = ()=>{
     container.innerHTML = `
-    <div class="header">Detalhes do seu jogo</div>
+    <div class="header">Your game details</div>
         <div class="content"></div>
 
-        <h3 id="score" class="result-score">Você acertou <b>${total_correct_ans}</b> de <b>${quiz_questions.length}</b></h3>
+        <h3 id="score" class="result-score">You got it right <b>${total_correct_ans}</b> out of <b>${quiz_questions.length}</b></h3>
         <div id="result-footer">
-            <button id="start-again">Jogar novamente</button>
-            <button id="view-result">Voltar ao resultado</button>
+            <button id="start-again">Play again</button>
+            <button id="view-result">Back to result</button>
         </div>
     `;
 
@@ -193,15 +193,15 @@ let viewResult = ()=>{
             
             if(quiz['selected_answer'] == quiz['answer']){
                 if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>You</span></p>`
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Ops</span></p>`
                 }else{
                     option_container.innerHTML += `<p class="result-option">${option}</p>`
                 }
             }else{
                 if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Boa</span></p>`
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Good</span></p>`
                 }else if(index+1 == quiz['selected_answer']){
-                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>You</span></p>`
+                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>Ops</span></p>`
                 }else{
                     option_container.innerHTML += `<p class="result-option">${option}</p>`
                 }
