@@ -87,7 +87,7 @@ let quizQuestion = (q) => {
             if ((index + 1) == quiz_questions[q]["answer"]) {
                 option.classList.add("correct");
                 total_correct_ans++;
-                option.innerHTML += "<span>Boa</span>";
+                option.innerHTML += "<span>Good</span>";
             } else {
                 option.classList.add("wrong");
                 option.innerHTML += "<span>Ops</span>";
